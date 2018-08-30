@@ -61,7 +61,7 @@
 <script>
     $.ajax({
        type: "GET",
-       url: "http://localhost:7777/api/stores",
+       url: "https://boiling-ridge-27666.herokuapp.com/api/stores",
        success:(data, status, xhr)=>{
            data.map((item)=>{
                $('#stores').append($('<option>',{
@@ -79,7 +79,7 @@
 
    $.ajax({
        type: "GET",
-       url: `http://localhost:7777/api/books/${bookId}`,
+       url: `https://boiling-ridge-27666.herokuapp.com/api/books/${bookId}`,
        success: (data, status, xhr)=>{
            $('#name').val(data.name);
            $('#author').val(data.author);
@@ -104,7 +104,7 @@
         
     $.ajax({
         type: "PATCH",
-        url: `http://localhost:7777/api/add/books/${bookId}`,
+        url: `https://boiling-ridge-27666.herokuapp.com/api/add/books/${bookId}`,
         data: JSON.stringify(bookObj),
         contentType:"application/json",
         success:(data, status, xhr)=>{
@@ -121,7 +121,7 @@
     $('#delete_book').click(()=>{
         $.ajax({
             type: "DELETE",
-            url: `http://localhost:7777/api/delete/books/${bookId}`,
+            url: `https://boiling-ridge-27666.herokuapp.com/api/delete/books/${bookId}`,
             success:(data, status, xhr)=>{
                 $('#books_form')[0].reset();
                 alert('Book was deleted succesfully!! Thank you!')
