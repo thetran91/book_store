@@ -8,6 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch server -e js server/server.js 7777 http://localhost:7777"
   },
+  "engines": {
+    "node":"8.11.4"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
