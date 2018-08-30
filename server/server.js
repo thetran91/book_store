@@ -12,7 +12,7 @@ const port = process.env.PORT || 7777;
 //DB - Mongo - Mongoose
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/book_db');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/book_db');
 
 const {Book} = require('./model/books');
 const {Stores} = require('./model/stores')
