@@ -4,6 +4,7 @@
   "description": "This is Book Project",
   "main": "index.js",
   "scripts": {
+    "start":"node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch server -e js server/server.js 7777 http://localhost:7777"
   },
